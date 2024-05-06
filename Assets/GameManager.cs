@@ -25,8 +25,12 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f; 
             isGamePaused = true;
             EndText.enabled = true;
-            if(Input.GetKey(KeyCode.KeypadEnter)){
+            Debug.Log("ok");
+            if(Input.GetKey(KeyCode.Backspace)){
                 UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+                Time.timeScale = 1f;
+
             }
         }
     }
